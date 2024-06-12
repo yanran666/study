@@ -22,11 +22,12 @@
 					<el-form-item>
 						<el-button type="primary" @click="search()" class="search_btn_find">查询</el-button>
 						<el-button @click="reset()" style="margin-right: 74px;" class="search_btn_reset">重置</el-button>
-						<el-button v-if="$check_option('/department_ward/table','export_db')" @click="export_db('dataTable')" style="margin-right: 155px;">导出</el-button>
-						<router-link v-if="user_group == '管理员' || $check_action('/department_ward/table','add') || $check_action('/department_ward/view','add')" class="el-button el-button--default el-button--primary search_btn_add" to="./view?">添加
-						</router-link>
-            			<el-button v-if="user_group == '管理员' || $check_action('/department_ward/table','del') || $check_action('/department_ward/view','del')" class="search_btn_del" type="danger" @click="delInfo()">删除</el-button>
-					</el-form-item>
+            <el-button v-if="checkOptionWrapper('/department_ward/table', 'export_db')" @click="export_db('dataTable')" style="margin-right: 155px;">导出</el-button>
+            <router-link v-if="user_group == '管理员' || checkActionWrapper('/department_ward/table', 'add') || checkActionWrapper('/department_ward/view', 'add')" class="el-button el-button--default el-button--primary search_btn_add" to="./view?">添加
+            </router-link>
+            <el-button v-if="user_group == '管理员' || checkActionWrapper('/department_ward/table', 'del') || checkActionWrapper('/department_ward/view', 'del')" class="search_btn_del" type="danger" @click="delInfo()">删除</el-button>
+
+          </el-form-item>
 				</el-col>
 
 			</el-row>
@@ -149,6 +150,26 @@
 			closeModal(){
 				this.showModal = false;
 				},
+      checkOptionWrapper(path, option) {
+        try {
+          const result = this.$check_option(path, option);
+          console.log(`$check_option(${path}, ${option}):`, result);
+          return result;
+        } catch (error) {
+          console.error(`Error in $check_option(${path}, ${option}):`, error);
+          return false;
+        }
+      },
+      checkActionWrapper(path, action) {
+        try {
+          const result = this.$check_action(path, action);
+          console.log(`$check_action(${path}, ${action}):`, result);
+          return result;
+        } catch (error) {
+          console.error(`Error in $check_action(${path}, ${action}):`, error);
+          return false;
+        }
+      },
 
 
 										
