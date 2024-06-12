@@ -11,7 +11,7 @@
  Target Server Version : 80037
  File Encoding         : 65001
 
- Date: 12/06/2024 18:27:05
+ Date: 12/06/2024 21:10:44
 */
 
 SET NAMES utf8mb4;
@@ -30,7 +30,7 @@ CREATE TABLE `access_token`  (
   `update_time` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '更新时间：',
   `user_id` int unsigned NOT NULL COMMENT '用户编号:',
   PRIMARY KEY (`token_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 102 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '登陆访问时长' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 108 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '登陆访问时长' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of access_token
@@ -82,7 +82,7 @@ INSERT INTO `access_token` VALUES (100, '7fc6d9b324f8c0a3a1784d04ef132692', NULL
 INSERT INTO `access_token` VALUES (101, '84e31b291f2bde6b7ceb27af5fe8eee3', NULL, 2, '2023-04-28 18:21:49', '2023-04-28 18:21:49', 1);
 INSERT INTO `access_token` VALUES (102, '644f7700fc144405a13a250746bb6597', NULL, 2, '2024-06-11 19:49:55', '2024-06-11 19:49:55', 1);
 INSERT INTO `access_token` VALUES (104, '1a155ca448e341448ba9452df86066ca', NULL, 2, '2024-06-12 13:32:08', '2024-06-12 13:32:08', 1);
-INSERT INTO `access_token` VALUES (105, 'b365cf49b6e4480f92f25d54f02dabb1', NULL, 2, '2024-06-12 18:19:47', '2024-06-12 18:19:47', 1);
+INSERT INTO `access_token` VALUES (107, 'b92e9ab810af4d50b66e94c98b8fee27', NULL, 2, '2024-06-12 20:25:33', '2024-06-12 20:25:33', 1);
 
 -- ----------------------------
 -- Table structure for archive_review
@@ -158,7 +158,7 @@ CREATE TABLE `auth`  (
   `update_time` datetime(6) DEFAULT NULL,
   `user_group` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`auth_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of auth
@@ -267,14 +267,14 @@ CREATE TABLE `department_ward`  (
 -- ----------------------------
 -- Records of department_ward
 -- ----------------------------
-INSERT INTO `department_ward` VALUES (1, '科室名称1', '科室类型1', '67336911844', 1, '此处可上传文字、图片、视频、超链接、表格等内容区1', 0, '2023-04-10 17:33:05', '2023-04-10 17:33:05');
-INSERT INTO `department_ward` VALUES (2, '科室名称2', '科室类型2', '223-61963833', 2, '此处可上传文字、图片、视频、超链接、表格等内容区2', 0, '2023-04-10 17:33:05', '2023-04-10 17:33:05');
-INSERT INTO `department_ward` VALUES (3, '科室名称3', '科室类型3', '88876138314', 3, '此处可上传文字、图片、视频、超链接、表格等内容区3', 0, '2023-04-10 17:33:05', '2023-04-10 17:33:05');
-INSERT INTO `department_ward` VALUES (4, '科室名称4', '科室类型4', '96671101295', 4, '此处可上传文字、图片、视频、超链接、表格等内容区4', 0, '2023-04-10 17:33:05', '2023-04-10 17:33:05');
-INSERT INTO `department_ward` VALUES (5, '科室名称5', '科室类型5', '309-84623929', 5, '此处可上传文字、图片、视频、超链接、表格等内容区5', 0, '2023-04-10 17:33:05', '2023-04-10 17:33:05');
-INSERT INTO `department_ward` VALUES (6, '科室名称6', '科室类型6', '163-03674942', 6, '此处可上传文字、图片、视频、超链接、表格等内容区6', 0, '2023-04-10 17:33:05', '2023-04-10 17:33:05');
-INSERT INTO `department_ward` VALUES (7, '科室名称7', '科室类型7', '6366-06192184', 7, '此处可上传文字、图片、视频、超链接、表格等内容区7', 0, '2023-04-10 17:33:05', '2023-04-10 17:33:05');
-INSERT INTO `department_ward` VALUES (8, '科室名称8', '科室类型8', '574-94866896', 8, '此处可上传文字、图片、视频、超链接、表格等内容区8', 0, '2023-04-10 17:33:05', '2023-04-10 17:33:05');
+INSERT INTO `department_ward` VALUES (1, '科室名称1', '科室类型1', '67336911844', 1, '1', 0, '2023-04-10 17:33:05', '2024-06-12 19:37:40');
+INSERT INTO `department_ward` VALUES (2, '科室名称2', '科室类型2', '223-61963833', 2, '1', 0, '2023-04-10 17:33:05', '2024-06-12 19:37:42');
+INSERT INTO `department_ward` VALUES (3, '科室名称3', '科室类型3', '88876138314', 3, '1', 0, '2023-04-10 17:33:05', '2024-06-12 19:37:53');
+INSERT INTO `department_ward` VALUES (4, '科室名称4', '科室类型4', '96671101295', 4, '1', 0, '2023-04-10 17:33:05', '2024-06-12 19:37:55');
+INSERT INTO `department_ward` VALUES (5, '科室名称5', '科室类型5', '309-84623929', 5, '1', 0, '2023-04-10 17:33:05', '2024-06-12 19:37:57');
+INSERT INTO `department_ward` VALUES (6, '科室名称6', '科室类型6', '163-03674942', 6, '1', 0, '2023-04-10 17:33:05', '2024-06-12 19:37:58');
+INSERT INTO `department_ward` VALUES (7, '科室名称7', '科室类型7', '6366-06192184', 7, '1', 0, '2023-04-10 17:33:05', '2024-06-12 19:38:00');
+INSERT INTO `department_ward` VALUES (8, '科室名称8', '科室类型8', '574-94866896', 8, '1', 0, '2023-04-10 17:33:05', '2024-06-12 19:38:03');
 
 -- ----------------------------
 -- Table structure for deployment_record
@@ -324,7 +324,14 @@ CREATE TABLE `head_nurse`  (
   `update_time` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '更新时间',
   PRIMARY KEY (`head_nurse_id`) USING BTREE,
   UNIQUE INDEX `nurse_head_job_number`(`nurse_head_job_number`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '护士长' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '护士长' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of head_nurse
+-- ----------------------------
+INSERT INTO `head_nurse` VALUES (1, 'HN001', '金正阳', '护士长', '已通过', 0, 1001, '2024-06-12 09:00:00', '2024-06-12 21:03:24');
+INSERT INTO `head_nurse` VALUES (2, 'HN002', '潘伟杰', '护士长', '已通过', 0, 1002, '2024-06-12 09:00:00', '2024-06-12 21:03:24');
+INSERT INTO `head_nurse` VALUES (3, 'HN003', '黄培宇', '护士长', '已通过', 0, 1003, '2024-06-12 09:00:00', '2024-06-12 21:03:24');
 
 -- ----------------------------
 -- Table structure for hits
@@ -339,7 +346,7 @@ CREATE TABLE `hits`  (
   `source_field` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL COMMENT '来源字段：',
   `source_id` int unsigned NOT NULL COMMENT '来源ID：',
   PRIMARY KEY (`hits_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci COMMENT = '用户点击' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci COMMENT = '用户点击' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for leave_application
@@ -535,7 +542,14 @@ CREATE TABLE `nurse_users`  (
   `update_time` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '更新时间',
   PRIMARY KEY (`nurse_users_id`) USING BTREE,
   UNIQUE INDEX `nurse_no`(`nurse_no`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '护士用户' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '护士用户' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of nurse_users
+-- ----------------------------
+INSERT INTO `nurse_users` VALUES (1, 'N001', '杨豪平', '外科', '已通过', 0, 1001, '2024-06-12 09:00:00', '2024-06-12 21:05:41');
+INSERT INTO `nurse_users` VALUES (2, 'N002', '岑辉阳', '内科', '已通过', 0, 1002, '2024-06-12 09:00:00', '2024-06-12 21:05:41');
+INSERT INTO `nurse_users` VALUES (3, 'N003', '洪麒星', '儿科', '已通过', 0, 1003, '2024-06-12 09:00:00', '2024-06-12 21:05:41');
 
 -- ----------------------------
 -- Table structure for nursing_department
@@ -552,7 +566,14 @@ CREATE TABLE `nursing_department`  (
   `update_time` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '更新时间',
   PRIMARY KEY (`nursing_department_id`) USING BTREE,
   UNIQUE INDEX `nursing_department_job_number`(`nursing_department_job_number`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '护理部' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '护理部' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of nursing_department
+-- ----------------------------
+INSERT INTO `nursing_department` VALUES (1, 'ND001', '外科', '已通过', 0, 1001, '2024-06-12 09:00:00', '2024-06-12 21:06:07');
+INSERT INTO `nursing_department` VALUES (2, 'ND002', '内科', '已通过', 0, 1002, '2024-06-12 09:00:00', '2024-06-12 21:06:07');
+INSERT INTO `nursing_department` VALUES (3, 'ND003', '儿科', '已通过', 0, 1003, '2024-06-12 09:00:00', '2024-06-12 21:06:07');
 
 -- ----------------------------
 -- Table structure for nursing_department_approval
@@ -669,7 +690,7 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, 1, '管理员', '2023-04-07 16:29:25', NULL, 0, 'admin', 'admin', 'bfd59291e825b5f2bbf1eb76569f8fe7', '', 0, '/api/upload/admin_avatar.jpg', '2023-04-28 17:35:13');
+INSERT INTO `user` VALUES (1, 1, '管理员', '2024-06-12 21:09:46', '', 0, 'admin', 'admin', 'bfd59291e825b5f2bbf1eb76569f8fe7', '', 0, '/api/upload/4cc777380cd791233de445bee8345982b3b780b8.jpg', '2023-04-28 17:35:13');
 
 -- ----------------------------
 -- Table structure for user_group
@@ -692,7 +713,7 @@ CREATE TABLE `user_group`  (
 -- ----------------------------
 -- Records of user_group
 -- ----------------------------
-INSERT INTO `user_group` VALUES (1, 100, '管理员', NULL, '', '', 0, 0, '2023-04-10 17:33:06', '2023-04-10 17:33:06');
+INSERT INTO `user_group` VALUES (1, 100, '管理员', '可以', '', '', 0, 0, '2023-04-10 17:33:06', '2024-06-12 20:37:44');
 INSERT INTO `user_group` VALUES (2, 100, '游客', NULL, '', '', 0, 0, '2023-04-10 17:33:06', '2023-04-10 17:33:06');
 INSERT INTO `user_group` VALUES (3, 100, '护士用户', NULL, 'nurse_users', 'nurse_users_id', 0, 0, '2023-04-10 17:33:06', '2023-04-10 17:33:06');
 INSERT INTO `user_group` VALUES (4, 100, '护士长', NULL, 'head_nurse', 'head_nurse_id', 0, 0, '2023-04-10 17:33:07', '2023-04-10 17:33:07');

@@ -159,6 +159,14 @@
 																		}
 		},
 		methods: {
+      $check_option(data) {
+        try {
+          const parsedData = JSON.parse(data);
+          // Further processing
+        } catch (error) {
+          console.error("JSON parsing error:", error);
+        }
+      },
 			// 关闭弹框
 			closeModal(){
 				this.showModal = false;

@@ -165,6 +165,24 @@
 													}
 		},
 		methods: {
+      $check_option(option) {
+        let parsedOption;
+        try {
+          parsedOption = JSON.parse(option);
+        } catch (e) {
+          console.error('JSON parsing error:', e, 'Input:', option);
+          return false;
+        }
+
+        // 确认 parsedOption 是否符合预期格式
+        if (!parsedOption) {
+          console.error('Parsed option is null or undefined:', option);
+          return false;
+        }
+
+        // 继续处理逻辑
+        return true;
+      },
 			// 关闭弹框
 			closeModal(){
 				this.showModal = false;
