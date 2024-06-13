@@ -100,6 +100,10 @@
 		overflow-y: scroll;
 		height: 100vh;
 	}
+  .el-side{
+    background: black !important;
+    color: ghostwhite !important;
+  }
 	.side::-webkit-scrollbar{
 		display: none;
 	}

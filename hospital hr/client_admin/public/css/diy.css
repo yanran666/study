@@ -232,7 +232,7 @@ border-top: 10px solid #f1c40f !important;
  /* vue后台列表 外框背景色 ////////////////////////*/
  .bg {
    /* 背景色 */
-   background-color: #f6f6f6 !important;
+   background-color: #000000 !important;
 
  }
 
@@ -243,7 +243,7 @@ border-top: 10px solid #f1c40f !important;
    /* 背景颜色 */
    /* background-image: linear-gradient(to bottom, rgba(224, 210, 220, 0.5), rgb(7, 5, 5)) !important; */
    /* 边框 */
-   background: transparent !important;
+   background: #000000 !important;
    border-right: 3px solid #3498db !important;
    /* width: 180px; */
  }
@@ -260,9 +260,9 @@ border-top: 10px solid #f1c40f !important;
  /* 导航栏主类背景色 */
  #app .page .side .el-submenu__title {
    /* margin-bottom: 10px; */
-   background: #34495e !important;
+   background: #000000 !important;
    font-family: auto;
-   color: #ecf0f1 !important;
+   color: #31AFE0 !important;
    margin-top: 14px;
    /* border-radius: 10px; */
    height: 40px;
@@ -276,7 +276,7 @@ border-top: 10px solid #f1c40f !important;
 
  /* 导航栏主类文字样式 */
  #app .page .side .el-submenu__title span {
-   color: #ecf0f1;
+   color: #FFFFFF;
    font-size: 1.0625rem;
    /* font-weight: 600; */
 
@@ -290,7 +290,7 @@ border-top: 10px solid #f1c40f !important;
  /* 左侧导航栏盒子内分支导航样式 */
 
  #app .page .side .el-submenu li {
-   color: #34495e !important;
+   color: #31AFE0 !important;
    margin: 0px !important;
 /*   padding: 0 0 0 45px !important; */
    text-align: center;
@@ -311,8 +311,8 @@ border-top: 10px solid #f1c40f !important;
 
  #app .page .side .el-menu-item.is-active,
  #app .page .side .el-menu-item {
-   background-color: #f1c40f!important;
-   color: #fff !important;
+   background-color: #000000!important;
+   color: #31AFE0 !important;
    font-size: 20px !important;
    font-family: auto !important;
    text-align: center !important;
@@ -338,7 +338,7 @@ border-top: 10px solid #f1c40f !important;
    /* 下划线颜色 */
    /* text-decoration-color: #00a4ff; */
    /* 文字颜色 */
-   color: #6c737e !important;
+   color: #31AFE0 !important;
   /* display: none; */
  }
 
@@ -346,8 +346,9 @@ border-top: 10px solid #f1c40f !important;
  /* 顶部栏 样式 */
  #app header {
    /* 背景 */
-   background-color: #3498db;
-
+   background-color: #FFFFFF;
+     color:#000000;
+     font-family: "Microsoft YaHei", SimSun, sans-serif;
 
 
  }
@@ -425,7 +426,7 @@ border-top: 10px solid #f1c40f !important;
    /* 下划线颜色 */
    /* text-decoration-color: #00a4ff; */
    /* 文字颜色 */
-   color: #EEEEEE;
+   color: #000000;
  }
 
  /* 点击头像 下拉框*/
