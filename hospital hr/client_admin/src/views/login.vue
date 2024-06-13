@@ -198,7 +198,7 @@
 			0 .5em 1em rgba(50, 50, 50, 0.6);
 		text-shadow: 0 1px 1px hsla(240, 0%, 100%, .5);
 		overflow: hidden;
-		/* background-color: rgba(255, 255, 255, .5); */
+    background-color: transparent !important;
 		border-radius: 0.5rem;
 	}
 
