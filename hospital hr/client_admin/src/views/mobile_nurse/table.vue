@@ -85,7 +85,7 @@
 			<el-table-column label="操作" min-width="120" v-if="user_group == '管理员' || $check_action('/mobile_nurse/table','set') || $check_action('/mobile_nurse/view','set') || $check_action('/mobile_nurse/view','get') || $check_action('/调配|变动/table','add') || $check_action('/调配|变动/view','add')" >
 
 
-				<template slot-scope="scope">
+				<template slot-scope="scope" >
 					<router-link class="el-button el-button--small is-plain el-button--success" style="margin: 5px !important;"
 					v-if="user_group == '管理员' || $check_action('/mobile_nurse/table','set') || $check_action('/mobile_nurse/view','set') || $check_action('/mobile_nurse/view','get')"
 						:to="'./view?' + field + '=' + scope.row[field]"

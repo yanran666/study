@@ -289,44 +289,6 @@ const routes = [
 			title: '变动记录详情'
 		}
 	},
-	// 专科准入路由
-	{
-		path: '/specialist_admission/table',
-		name: 'specialist_admission_table',
-		component: () => import('../views/specialist_admission/table.vue'),
-		meta: {
-			index: 0,
-			title: '专科准入列表'
-		}
-	},
-	{
-		path: '/specialist_admission/view',
-		name: 'specialist_admission_view',
-		component: () => import('../views/specialist_admission/view.vue'),
-		meta: {
-			index: 0,
-			title: '专科准入详情'
-		}
-	},
-	// 夜班准入路由
-	{
-		path: '/night_shift_access/table',
-		name: 'night_shift_access_table',
-		component: () => import('../views/night_shift_access/table.vue'),
-		meta: {
-			index: 0,
-			title: '夜班准入列表'
-		}
-	},
-	{
-		path: '/night_shift_access/view',
-		name: 'night_shift_access_view',
-		component: () => import('../views/night_shift_access/view.vue'),
-		meta: {
-			index: 0,
-			title: '夜班准入详情'
-		}
-	},
 	// 休假申请路由
 	{
 		path: '/leave_application/table',
@@ -346,45 +308,6 @@ const routes = [
 			title: '休假申请详情'
 		}
 	},
-	// 大科审批路由
-	{
-		path: '/dake_approval/table',
-		name: 'dake_approval_table',
-		component: () => import('../views/dake_approval/table.vue'),
-		meta: {
-			index: 0,
-			title: '大科审批列表'
-		}
-	},
-	{
-		path: '/dake_approval/view',
-		name: 'dake_approval_view',
-		component: () => import('../views/dake_approval/view.vue'),
-		meta: {
-			index: 0,
-			title: '大科审批详情'
-		}
-	},
-	// 护理部审批路由
-	{
-		path: '/nursing_department_approval/table',
-		name: 'nursing_department_approval_table',
-		component: () => import('../views/nursing_department_approval/table.vue'),
-		meta: {
-			index: 0,
-			title: '护理部审批列表'
-		}
-	},
-	{
-		path: '/nursing_department_approval/view',
-		name: 'nursing_department_approval_view',
-		component: () => import('../views/nursing_department_approval/view.vue'),
-		meta: {
-			index: 0,
-			title: '护理部审批详情'
-		}
-	},
-
 	// 用户路由
 	{
 		path: '/user/table',
