@@ -21,14 +21,15 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * E代表实体类参数、S代表服务类参数。
  */
 @Slf4j
 public class BaseController<E, S extends BaseService<E>> {
-
+    /**自动生成属性的setter方法*/
     @Setter
     protected S service;
 
-
+    /**’@Transactional‘标识该方法只能用于提交事务*/
     @PostMapping("/add")
     @Transactional
     public Map<String, Object> add(HttpServletRequest request) throws IOException {
@@ -160,7 +161,9 @@ public class BaseController<E, S extends BaseService<E>> {
         sheets.write(response.getOutputStream());
         sheets.close();
     }
-
+    /**
+     * 根据传入的对象‘o’构建一个包含成功结果的‘map’
+     * */
     public Map<String, Object> success(Object o) {
         Map<String, Object> map = new HashMap<>();
         if (o == null) {

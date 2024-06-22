@@ -25,10 +25,13 @@ import java.security.MessageDigest;
 import java.util.*;
 
 /**
+ * E代表实体类参数
  */
 @Slf4j
 public class BaseService<E>{
-
+    /**
+     * ‘@PersistenceContext’只能用来注入‘entityManager’。
+     * */
     @Autowired
     @PersistenceContext
     private EntityManager entityManager;

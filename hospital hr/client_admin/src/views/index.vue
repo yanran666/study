@@ -10,17 +10,15 @@
 				</el-row>
 
 				<el-row>
-									<el-col v-if="user_group == '管理员' || user_group == '管理员'|| $check_figure('/department_ward/table')" :span="8">
+          <el-col v-if="user_group == '管理员' || user_group == '护士用户'|| $check_figure('/department_ward/table')" :span="8">
 						<div class="card chart">
 									<newBarChart v-if="bar_obj_department_ward.values.length > 0" id="bar_obj_department_ward" :vm="bar_obj_department_ward" :title="'科室病区统计'">
 							</newBarChart>
 							<div v-if="!bar_obj_department_ward.values.length">科室病区没有符合条件的数据</div>
-								</div>
+            </div>
 					</el-col>
-															<el-col v-if="user_group == '管理员' || $check_figure('/leave_application/table')" :span="8">
 
-					</el-col>
-							</el-row>
+        </el-row>
 
 
 			</div>
@@ -216,7 +214,6 @@
 	}
 
 	.card {
-		overflow: hidden;
 	}
 
 	.iframe_box ,.iframe_box_change{
