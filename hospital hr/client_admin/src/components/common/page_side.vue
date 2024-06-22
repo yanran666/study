@@ -14,21 +14,21 @@
 
 
 		<el-submenu index="user"
-					v-show="user_group == '管理员' || $check_group(['/user/table','/user_group/table'
+					v-show="user_group == '管理员' || user_group == '护士用户'|| $check_group(['/user/table','/user_group/table'
 						,'/nurse_users/table'
 							,'/head_nurse/table'
 							,'/nursing_department/table'
 																				])">
 			<template slot="title"><i class="el-icon-s-custom"></i><span>系统用户</span></template>
 			<el-menu-item index="/user/table" v-show="user_group == '管理员'"><span>管理员</span></el-menu-item>
-						<el-menu-item index="/nurse_users/table" v-show="user_group == '管理员' || $check_action('/nurse_users/table')"><span>护士用户</span></el-menu-item>
+						<el-menu-item index="/nurse_users/table" v-show="user_group == '管理员' || user_group == '护士用户'|| $check_action('/nurse_users/table')"><span>护士用户</span></el-menu-item>
 							<el-menu-item index="/head_nurse/table" v-show="user_group == '管理员' || $check_action('/head_nurse/table')"><span>护士长</span></el-menu-item>
-							<el-menu-item index="/nursing_department/table" v-show="user_group == '管理员' || $check_action('/nursing_department/table')"><span>护理部</span></el-menu-item>
+							<el-menu-item index="/nursing_department/table" v-show="user_group == '管理员' || user_group == '护士用户'|| $check_action('/nursing_department/table')"><span>护理部</span></el-menu-item>
 																<!-- <el-menu-item index="/user_group/table"><span>用户组</span></el-menu-item> -->
 		</el-submenu>
 
 		<el-submenu index="auth"
-					v-show="user_group == '管理员'">
+					v-show="user_group == '管理员'|| user_group == '护士用户'">
 			<template slot="title"><i class="el-icon-s-custom"></i><span>权限管理</span></template>
 			<el-menu-item index="/auth/table" v-show="user_group == '管理员'"><span>权限列表</span></el-menu-item>
 		</el-submenu>

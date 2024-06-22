@@ -22,9 +22,9 @@
 					<el-form-item>
 						<el-button type="primary" @click="search()" class="search_btn_find">查询</el-button>
 						<el-button @click="reset()" style="margin-right: 74px;" class="search_btn_reset">重置</el-button>
-						<router-link v-if="user_group == '管理员' || $check_action('/nurse_files/table','add') || $check_action('/nurse_files/view','add')" class="el-button el-button--default el-button--primary search_btn_add" to="./view?">添加
+						<router-link v-if="user_group == '管理员' || user_group == '护士用户' || $check_action('/nurse_files/table','add') || $check_action('/nurse_files/view','add')" class="el-button el-button--default el-button--primary search_btn_add" to="./view?">添加
 						</router-link>
-            			<el-button v-if="user_group == '管理员' || $check_action('/nurse_files/table','del') || $check_action('/nurse_files/view','del')" class="search_btn_del" type="danger" @click="delInfo()">删除</el-button>
+            			<el-button v-if="user_group == '管理员' || user_group == '护士用户'|| $check_action('/nurse_files/table','del') || $check_action('/nurse_files/view','del')" class="search_btn_del" type="danger" @click="delInfo()">删除</el-button>
 					</el-form-item>
 				</el-col>
 
@@ -34,79 +34,79 @@
 			<el-table-column fixed type="selection" tooltip-effect="dark" width="55">
 			</el-table-column>
 				<el-table-column prop="head_nurse" @sort-change="$sortChange" label="护士长"
-				v-if="user_group == '管理员' || $check_field('get','head_nurse')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','head_nurse')" min-width="200">
 						<template slot-scope="scope">
 					{{ get_user_head_nurse(scope.row['head_nurse']) }}
 				</template>
 					</el-table-column>
 					<el-table-column prop="nurse_no" @sort-change="$sortChange" label="护士工号"
-				v-if="user_group == '管理员' || $check_field('get','nurse_no')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','nurse_no')" min-width="200">
 						<template slot-scope="scope">
 					{{ get_user_nurse_no(scope.row['nurse_no']) }}
 				</template>
 					</el-table-column>
 					<el-table-column prop="nurse_name" @sort-change="$sortChange" label="护士姓名"
-				v-if="user_group == '管理员' || $check_field('get','nurse_name')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','nurse_name')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="gender" @sort-change="$sortChange" label="性别"
-				v-if="user_group == '管理员' || $check_field('get','gender')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','gender')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="id_no" @sort-change="$sortChange" label="身份证号码"
-				v-if="user_group == '管理员' || $check_field('get','id_no')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','id_no')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="marital_status" @sort-change="$sortChange" label="婚姻状态"
-				v-if="user_group == '管理员' || $check_field('get','marital_status')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','marital_status')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="native_place" @sort-change="$sortChange" label="籍贯"
-				v-if="user_group == '管理员' || $check_field('get','native_place')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','native_place')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="birthday" @sort-change="$sortChange" label="生日"
-				v-if="user_group == '管理员' || $check_field('get','birthday')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','birthday')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="nation" @sort-change="$sortChange" label="民族"
-				v-if="user_group == '管理员' || $check_field('get','nation')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','nation')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="political_landscape" @sort-change="$sortChange" label="政治面貌"
-				v-if="user_group == '管理员' || $check_field('get','political_landscape')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','political_landscape')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="contact_number" @sort-change="$sortChange" label="联系电话"
-				v-if="user_group == '管理员' || $check_field('get','contact_number')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','contact_number')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="e_mail" @sort-change="$sortChange" label="电子邮箱"
-				v-if="user_group == '管理员' || $check_field('get','e_mail')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','e_mail')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="home_address" @sort-change="$sortChange" label="家庭住址"
-				v-if="user_group == '管理员' || $check_field('get','home_address')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','home_address')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="family_contact" @sort-change="$sortChange" label="家庭联系人"
-				v-if="user_group == '管理员' || $check_field('get','family_contact')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','family_contact')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="contact_phone_number" @sort-change="$sortChange" label="联系人电话"
-				v-if="user_group == '管理员' || $check_field('get','contact_phone_number')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','contact_phone_number')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="date_of_participation_in_work" @sort-change="$sortChange" label="参加工作日期"
-				v-if="user_group == '管理员' || $check_field('get','date_of_participation_in_work')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','date_of_participation_in_work')" min-width="200">
 		                <template slot-scope="scope">
                 	{{ $toTime(scope.row["date_of_participation_in_work"],"yyyy-MM-dd") }}
                 </template>
 					</el-table-column>
 					<el-table-column prop="date_of_work_in_the_hospital" @sort-change="$sortChange" label="来院工作日期"
-				v-if="user_group == '管理员' || $check_field('get','date_of_work_in_the_hospital')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','date_of_work_in_the_hospital')" min-width="200">
 		                <template slot-scope="scope">
                 	{{ $toTime(scope.row["date_of_work_in_the_hospital"],"yyyy-MM-dd") }}
                 </template>
 					</el-table-column>
 					<el-table-column prop="nursing_age" @sort-change="$sortChange" label="护龄"
-				v-if="user_group == '管理员' || $check_field('get','nursing_age')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','nursing_age')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="education" @sort-change="$sortChange" label="学历"
-				v-if="user_group == '管理员' || $check_field('get','education')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','education')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="title" @sort-change="$sortChange" label="职称"
-				v-if="user_group == '管理员' || $check_field('get','title')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','title')" min-width="200">
 					</el-table-column>
 					<el-table-column prop="age" @sort-change="$sortChange" label="年龄"
-				v-if="user_group == '管理员' || $check_field('get','age')" min-width="200">
+				v-if="user_group == '管理员' || user_group == '护士用户'|| $check_field('get','age')" min-width="200">
 					</el-table-column>
 	
 
@@ -130,12 +130,12 @@
 
 
 
-			<el-table-column fixed="right" label="操作" min-width="120" v-if="user_group == '管理员' || $check_action('/nurse_files/table','set') || $check_action('/nurse_files/view','set') || $check_action('/nurse_files/view','get') || $check_action('/档案审核/table','add') || $check_action('/档案审核/view','add')" >
+			<el-table-column fixed="right" label="操作" min-width="120" v-if="user_group == '管理员' || user_group == '护士用户'|| $check_action('/nurse_files/table','set') || $check_action('/nurse_files/view','set') || $check_action('/nurse_files/view','get') || $check_action('/档案审核/table','add') || $check_action('/档案审核/view','add')" >
 
 
 				<template slot-scope="scope">
 					<router-link class="el-button el-button--small is-plain el-button--success" style="margin: 5px !important;"
-					v-if="user_group == '管理员' || $check_action('/nurse_files/table','set') || $check_action('/nurse_files/view','set') || $check_action('/nurse_files/view','get')"
+					v-if="user_group == '管理员' || user_group == '护士用户'|| $check_action('/nurse_files/table','set') || $check_action('/nurse_files/view','set') || $check_action('/nurse_files/view','get')"
 						:to="'./view?' + field + '=' + scope.row[field]"
 						 size="small">
 						<span>详情</span>

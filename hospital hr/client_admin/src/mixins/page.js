@@ -1014,9 +1014,7 @@ export default {
                 url = this.url_upload;
             }
 
-            if (!param) {
-                param = this.form;
-            }
+
             if (msg) {
                 this.$toast(msg, 'danger');
             } else {
@@ -1400,13 +1398,7 @@ export default {
             });
         },
 
-        /**
-         * 选择更改
-         * @param {Object} val
-         */
-        selectionChange(val) {
-            this.selection = val;
-        },
+
 
         /**
          * 条数变更
